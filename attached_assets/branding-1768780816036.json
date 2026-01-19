@@ -1,0 +1,81 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Helvetica Neue",
+      "count": 14
+    },
+    {
+      "family": "sans-serif",
+      "count": 14
+    },
+    {
+      "family": "Helvetica",
+      "count": 10
+    },
+    {
+      "family": "Georgia",
+      "count": 4
+    },
+    {
+      "family": "serif",
+      "count": 4
+    }
+  ],
+  "colors": {
+    "primary": "#000000",
+    "accent": "#000000",
+    "background": "#FAFAFA",
+    "textPrimary": "#000000",
+    "link": "#000000"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Helvetica Neue",
+      "heading": "Helvetica Neue"
+    },
+    "fontStacks": {
+      "body": [
+        "Helvetica Neue",
+        "Helvetica",
+        "sans-serif"
+      ],
+      "heading": [
+        "Helvetica Neue",
+        "Helvetica",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Helvetica Neue",
+        "Helvetica",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "16px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "4px"
+  },
+  "components": {},
+  "images": {
+    "logo": "File saved at: attached_assets/logo.jpg",
+    "favicon": null,
+    "ogImage": null
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Heuristic fallback: Good indicators: in header, no link (brand logos usually link to homepage, penalty), header location, highest logo on page, alt matches logo/brand, class contains logo, alt contains brand name \"The Well\", too large (likely banner/og:image, penalty), not visible (penalty). Score: 47 (ahead by 47 points)",
+    "confidence": 0.65
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}
