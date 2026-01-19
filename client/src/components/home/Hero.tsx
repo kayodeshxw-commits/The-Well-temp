@@ -12,22 +12,31 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={containerRef} className="h-screen relative flex flex-col items-center justify-center overflow-hidden">
-      {/* Brutalist Water Background Effect */}
-      <div className="absolute inset-0 z-0 opacity-10 grayscale pointer-events-none">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="w-full h-full object-cover"
+    <section ref={containerRef} className="h-screen relative flex flex-col items-center justify-center overflow-hidden bg-black">
+      {/* Brutalist Water Background Effect - Using a generated high-contrast asset */}
+      <div className="absolute inset-0 z-0 opacity-40 grayscale pointer-events-none">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.1, 1],
+            rotate: [0, 1, 0]
+          }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity, 
+            ease: "linear" 
+          }}
+          className="w-full h-full"
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-water-ripples-in-a-dark-pool-4251-large.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+          <img 
+            src="/attached_assets/generated_images/abstract_liquid_brutalist_water_texture_black_and_white.png" 
+            alt="Brutalist Water Texture" 
+            className="w-full h-full object-cover opacity-50"
+          />
+        </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
       </div>
 
-      <motion.div style={{ y, opacity }} className="z-10 text-center px-4">
+      <motion.div style={{ y, opacity }} className="z-10 text-center px-4 invert">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
