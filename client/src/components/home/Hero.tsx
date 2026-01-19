@@ -13,6 +13,20 @@ export function Hero() {
 
   return (
     <section ref={containerRef} className="h-screen relative flex flex-col items-center justify-center overflow-hidden">
+      {/* Brutalist Water Background Effect */}
+      <div className="absolute inset-0 z-0 opacity-10 grayscale pointer-events-none">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="w-full h-full object-cover"
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-water-ripples-in-a-dark-pool-4251-large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+      </div>
+
       <motion.div style={{ y, opacity }} className="z-10 text-center px-4">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
