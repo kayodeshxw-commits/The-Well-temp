@@ -92,7 +92,7 @@ export function Services() {
                 visible: { transition: { staggerChildren: 0.18 } },
               }}
             >
-              {["Exist", "Enrichment", "Collaborate", "Celebrate"].map((word) => (
+              {["Exist", "Enrich", "Collaborate", "Celebrate"].map((word) => (
                 <motion.span
                   key={word}
                   className="font-display text-lg lg:text-2xl font-black uppercase leading-tight"
