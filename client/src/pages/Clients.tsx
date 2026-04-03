@@ -32,7 +32,7 @@ export default function Clients() {
 
         {/* Header */}
         <motion.h1
-          className="font-display text-6xl md:text-8xl font-black uppercase tracking-tight"
+          className="font-display text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

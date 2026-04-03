@@ -61,7 +61,7 @@ export function CurrentProjects() {
         transition={{ duration: 0.6 }}
       >
         <p className="font-mono text-xs uppercase tracking-widest opacity-40 mb-2">Currently</p>
-        <h2 className="font-display text-3xl md:text-5xl font-black uppercase tracking-tight">
+        <h2 className="font-display text-2xl md:text-5xl font-black uppercase tracking-tight">
           In Development
         </h2>
       </motion.div>
