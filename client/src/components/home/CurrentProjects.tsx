@@ -73,7 +73,7 @@ export function CurrentProjects() {
             <span key={i} className="flex items-center gap-4">
               <a
                 href={`/work/${p.slug}`}
-                className="font-display text-2xl font-black uppercase tracking-tight hover:opacity-50 transition-opacity duration-200"
+                className="font-display text-base md:text-2xl font-black uppercase tracking-tight hover:opacity-50 transition-opacity duration-200"
               >
                 {p.title}
               </a>
@@ -89,7 +89,7 @@ export function CurrentProjects() {
           <motion.a
             key={project.slug}
             href={`/work/${project.slug}`}
-            className="flex items-center justify-between gap-8 py-8 group"
+            className="flex items-center justify-between gap-4 py-6 md:py-8 group"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -104,7 +104,7 @@ export function CurrentProjects() {
                 />
               </div>
               <div className="min-w-0">
-                <h3 className="font-display text-xl md:text-2xl font-black uppercase tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                <h3 className="font-display text-sm md:text-xl font-black uppercase tracking-tight group-hover:translate-x-2 transition-transform duration-300">
                   {project.title}
                 </h3>
                 <p className="font-sans text-sm opacity-50 mt-1 leading-snug line-clamp-2">
