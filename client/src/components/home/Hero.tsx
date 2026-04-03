@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const missionLines = [
   { text: "We ", bold: "exist", rest: " to replenish." },
   { text: "We ", bold: "enrich", rest: " unique perspectives." },
-  { text: "We ", bold: "collaborate", rest: " to bring your artistic vision to life." },
+  { text: "We ", bold: "collaborate", rest: " to bring art to life." },
   { text: "We ", bold: "celebrate", rest: " working across disciplines and cultures." },
 ];
 
