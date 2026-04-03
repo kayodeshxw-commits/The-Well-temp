@@ -95,7 +95,7 @@ export function Services() {
               {["Exist", "Enrichment", "Collaborate", "Celebrate"].map((word) => (
                 <motion.span
                   key={word}
-                  className="font-display text-2xl font-black uppercase leading-tight"
+                  className="font-display text-lg lg:text-2xl font-black uppercase leading-tight"
                   variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },

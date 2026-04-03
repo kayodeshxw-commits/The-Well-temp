@@ -38,7 +38,7 @@ const marqueeItems = [...projects, ...projects];
 
 export function CurrentProjects() {
   return (
-    <section className="py-24 bg-black text-white overflow-hidden">
+    <section className="py-24 bg-black text-white">
       <style>{`
         @keyframes marquee {
           from { transform: translateX(0); }
@@ -61,7 +61,7 @@ export function CurrentProjects() {
         transition={{ duration: 0.6 }}
       >
         <p className="font-mono text-xs uppercase tracking-widest opacity-40 mb-2">Currently</p>
-        <h2 className="font-display text-4xl md:text-5xl font-black uppercase tracking-tight">
+        <h2 className="font-display text-3xl md:text-5xl font-black uppercase tracking-tight">
           In Development
         </h2>
       </motion.div>
@@ -88,7 +88,7 @@ export function CurrentProjects() {
         {projects.map((project, i) => (
           <motion.a
             key={project.slug}
-            href={`/clients/${project.slug}`}
+            href={`/work/${project.slug}`}
             className="flex items-center justify-between gap-8 py-8 group"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
