@@ -38,7 +38,7 @@ const marqueeItems = [...projects, ...projects];
 
 export function CurrentProjects() {
   return (
-    <section className="py-24 bg-black text-white">
+    <section className="py-24 bg-black text-white overflow-x-hidden">
       <style>{`
         @keyframes marquee {
           from { transform: translateX(0); }
