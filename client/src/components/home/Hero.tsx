@@ -4,7 +4,7 @@ const missionLines = [
   { text: "We ", bold: "exist", rest: " to replenish." },
   { text: "We ", bold: "enrich", rest: " unique perspectives." },
   { text: "We ", bold: "collaborate", rest: " to bring art to life." },
-  { text: "We ", bold: "celebrate", rest: " working across disciplines and cultures." },
+  { text: "We ", bold: "celebrate", rest: " all disciplines and cultures." },
 ];
 
 export default function Hero() {
