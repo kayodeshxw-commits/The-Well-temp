@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const projects = [
@@ -37,20 +38,20 @@ const projects = [
 const marqueeItems = [...projects, ...projects];
 
 export function CurrentProjects() {
+  const x = useMotionValue(0);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+
+  useAnimationFrame((_, delta) => {
+    if (isDragging.current) return;
+    const trackWidth = trackRef.current?.offsetWidth ?? 0;
+    const half = trackWidth / 2;
+    const next = x.get() - delta * 0.04;
+    x.set(next <= -half ? 0 : next);
+  });
+
   return (
     <section className="py-24 bg-black text-white overflow-x-hidden">
-      <style>{`
-        @keyframes marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        .marquee-track {
-          animation: marquee 24s linear infinite;
-        }
-        .marquee-track:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
 
       {/* Section header */}
       <motion.div
@@ -66,13 +67,23 @@ export function CurrentProjects() {
         </h2>
       </motion.div>
 
-      {/* Marquee ticker */}
-      <div className="border-t border-b border-white/10 py-5 mb-16 overflow-hidden">
-        <div className="marquee-track flex gap-16 whitespace-nowrap w-max">
+      {/* Marquee ticker — drag to scroll, auto-scrolls otherwise */}
+      <div className="border-t border-b border-white/10 py-5 mb-16 overflow-hidden cursor-grab active:cursor-grabbing">
+        <motion.div
+          ref={trackRef}
+          className="flex gap-16 whitespace-nowrap w-max"
+          style={{ x }}
+          drag="x"
+          dragConstraints={{ left: -(trackRef.current?.offsetWidth ?? 0) / 2, right: 0 }}
+          dragElastic={0.08}
+          onDragStart={() => { isDragging.current = true; }}
+          onDragEnd={() => { isDragging.current = false; }}
+        >
           {marqueeItems.map((p, i) => (
             <span key={i} className="flex items-center gap-4">
               <a
                 href={`/work/${p.slug}`}
+                onClick={(e) => e.stopPropagation()}
                 className="font-display text-base md:text-2xl font-black uppercase tracking-tight hover:opacity-50 transition-opacity duration-200"
               >
                 {p.title}
@@ -80,7 +91,7 @@ export function CurrentProjects() {
               <span className="text-white/20 text-xl">—</span>
             </span>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Stacked list */}
@@ -100,7 +111,7 @@ export function CurrentProjects() {
                 <img
                   src={project.logo}
                   alt={project.title}
-                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-full object-contain transition-all duration-300"
                 />
               </div>
               <div className="min-w-0">
