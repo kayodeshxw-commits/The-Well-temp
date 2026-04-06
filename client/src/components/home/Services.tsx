@@ -83,7 +83,7 @@ export function Services() {
         <div className="lg:col-span-4">
           <div className="sticky top-32">
             <motion.div
-              className="flex flex-col mb-0"
+              className="hidden lg:flex flex-col mb-0"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}

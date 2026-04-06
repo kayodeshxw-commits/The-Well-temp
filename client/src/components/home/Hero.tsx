@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const missionLines = [
   { text: "We ", bold: "exist", rest: " to replenish." },
@@ -8,6 +8,9 @@ const missionLines = [
 ];
 
 export default function Hero() {
+  const { scrollY } = useScroll();
+  const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-0 px-6 text-center">
       <motion.img
@@ -47,10 +50,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.div
         className="w-1 bg-black origin-top mt-16 mb-0"
-        style={{ height: "50vh" }}
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        transition={{ delay: 2, duration: 1.4, ease: "easeInOut" }}
+        style={{ height: "50vh", scaleY }}
       />
     </section>
   );
