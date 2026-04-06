@@ -46,7 +46,7 @@ export function CurrentProjects() {
     if (isDragging.current) return;
     const trackWidth = trackRef.current?.offsetWidth ?? 0;
     const half = trackWidth / 2;
-    const next = x.get() - delta * 0.04;
+    const next = x.get() - delta * 0.1;
     x.set(next <= -half ? 0 : next);
   });
 
