@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -25,6 +25,8 @@ const clients = [
 
 export default function Clients() {
   usePageTitle("Work");
+  const { scrollY } = useScroll();
+  const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
   return (
     <>
       <Navbar />
@@ -42,10 +44,7 @@ export default function Clients() {
 
         <motion.div
           className="w-1 bg-black mx-auto mt-4 mb-16 origin-top"
-          style={{ height: "50vh" }}
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ delay: 0.4, duration: 1.4, ease: "easeInOut" }}
+          style={{ height: "50vh", scaleY }}
         />
 
         {/* Flex-wrap collage */}
@@ -68,8 +67,8 @@ export default function Clients() {
                 key={client.name}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.04, duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.2 + index * 0.06, duration: 0.5 }}
                 className={client.href ? "" : "opacity-40 cursor-default"}
               >
                 {client.href ? (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -7,6 +7,8 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 export default function Contact() {
   usePageTitle("Contact");
   const [submitted, setSubmitted] = useState(false);
+  const { scrollY } = useScroll();
+  const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -35,10 +37,7 @@ export default function Contact() {
 
         <motion.div
           className="w-1 bg-black mx-auto mt-4 mb-16 origin-top"
-          style={{ height: "50vh" }}
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ delay: 0.4, duration: 1.4, ease: "easeInOut" }}
+          style={{ height: "50vh", scaleY }}
         />
 
         {submitted ? (
