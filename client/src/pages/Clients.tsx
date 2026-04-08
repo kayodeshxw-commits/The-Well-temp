@@ -26,7 +26,10 @@ const clients = [
 export default function Clients() {
   usePageTitle("Work");
   const { scrollY } = useScroll();
-  const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
+  const scaleY = useTransform(scrollY, [0, 500], [0, 1], { clamp: true });
+  const contentOpacity = useTransform(scrollY, [480, 560], [0, 1], { clamp: true });
+  const contentY = useTransform(scrollY, [480, 560], [24, 0], { clamp: true });
+
   return (
     <>
       <Navbar />
@@ -44,12 +47,15 @@ export default function Clients() {
 
         <motion.div
           className="w-1 bg-black mx-auto mt-4 mb-16 origin-top"
-          style={{ height: "50vh", scaleY }}
+          style={{ height: "100vh", scaleY }}
         />
 
         {/* Flex-wrap collage */}
-        <div className="flex flex-wrap justify-center items-center gap-10 max-w-5xl mx-auto">
-          {clients.map((client, index) => {
+        <motion.div
+          className="flex flex-wrap justify-center items-center gap-10 max-w-5xl mx-auto"
+          style={{ opacity: contentOpacity, y: contentY }}
+        >
+          {clients.map((client) => {
             const img = client.logo ? (
               <img
                 src={client.logo}
@@ -63,12 +69,8 @@ export default function Clients() {
             );
 
             return (
-              <motion.div
+              <div
                 key={client.name}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ delay: 0.2 + index * 0.06, duration: 0.5 }}
                 className={client.href ? "" : "opacity-40 cursor-default"}
               >
                 {client.href ? (
@@ -78,10 +80,10 @@ export default function Clients() {
                 ) : (
                   <div title={client.name}>{img}</div>
                 )}
-              </motion.div>
+              </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
       <Footer />
     </>

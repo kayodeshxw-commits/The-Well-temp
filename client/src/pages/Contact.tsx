@@ -8,7 +8,9 @@ export default function Contact() {
   usePageTitle("Contact");
   const [submitted, setSubmitted] = useState(false);
   const { scrollY } = useScroll();
-  const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
+  const scaleY = useTransform(scrollY, [0, 500], [0, 1], { clamp: true });
+  const contentOpacity = useTransform(scrollY, [480, 560], [0, 1], { clamp: true });
+  const contentY = useTransform(scrollY, [480, 560], [24, 0], { clamp: true });
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,29 +39,23 @@ export default function Contact() {
 
         <motion.div
           className="w-1 bg-black mx-auto mt-4 mb-16 origin-top"
-          style={{ height: "50vh", scaleY }}
+          style={{ height: "100vh", scaleY }}
         />
 
+        <motion.div style={{ opacity: contentOpacity, y: contentY }}>
         {submitted ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-lg mx-auto text-center space-y-4"
-          >
+          <div className="max-w-lg mx-auto text-center space-y-4">
             <p className="font-display text-3xl font-black uppercase">Message sent.</p>
             <p className="font-sans text-base opacity-60">We'll be in touch.</p>
-          </motion.div>
+          </div>
         ) : (
-          <motion.form
+          <form
             name="contact"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="max-w-lg mx-auto text-left space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" className="hidden" />
@@ -120,8 +116,9 @@ export default function Contact() {
             >
               Send Message
             </button>
-          </motion.form>
+          </form>
         )}
+        </motion.div>
       </div>
       <Footer />
     </>
