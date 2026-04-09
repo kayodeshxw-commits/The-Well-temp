@@ -118,7 +118,7 @@ export function CurrentProjects() {
                 <h3 className="font-display text-sm md:text-xl font-black uppercase tracking-tight group-hover:translate-x-2 transition-transform duration-300">
                   {project.title}
                 </h3>
-                <p className="font-sans text-sm opacity-50 mt-1 leading-snug line-clamp-2">
+                <p className="font-sans text-sm opacity-50 mt-1 leading-snug">
                   {project.tagline}
                 </p>
               </div>
