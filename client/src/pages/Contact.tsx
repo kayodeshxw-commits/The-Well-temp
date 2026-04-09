@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CurrentProjects } from "@/components/home/CurrentProjects";
-import { Teardrop } from "@/components/ui/Teardrop";
+
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function Contact() {
@@ -11,7 +11,6 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const { scrollY } = useScroll();
   const scaleY = useTransform(scrollY, [0, 500], [0, 1], { clamp: true });
-  const dropOpacity = useTransform(scrollY, [460, 500], [0, 1], { clamp: true });
   const contentOpacity = useTransform(scrollY, [480, 560], [0, 1], { clamp: true });
   const contentY = useTransform(scrollY, [480, 560], [24, 0], { clamp: true });
 
@@ -40,15 +39,10 @@ export default function Contact() {
           Contact
         </motion.h1>
 
-        <div className="flex flex-col items-center mt-4 mb-16">
-          <motion.div
-            className="w-1 bg-black origin-top"
-            style={{ height: "100vh", scaleY }}
-          />
-          <motion.div style={{ opacity: dropOpacity }}>
-            <Teardrop size={24} />
-          </motion.div>
-        </div>
+        <motion.div
+          className="w-1 bg-black mx-auto mt-4 mb-16 origin-top"
+          style={{ height: "100vh", scaleY }}
+        />
 
         <motion.div style={{ opacity: contentOpacity, y: contentY }}>
         {submitted ? (
