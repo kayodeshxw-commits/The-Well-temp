@@ -54,7 +54,7 @@ export default function Clients() {
             style={{ height: "100vh", scaleY }}
           />
           <motion.div style={{ opacity: dropOpacity }}>
-            <Teardrop size={10} />
+            <Teardrop size={24} />
           </motion.div>
         </div>
 

@@ -16,7 +16,7 @@ export function ClientDivider() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.0, duration: 0.4 }}
       >
-        <Teardrop size={8} />
+        <Teardrop size={20} />
       </motion.div>
     </div>
   );

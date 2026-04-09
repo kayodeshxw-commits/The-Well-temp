@@ -56,7 +56,7 @@ export default function Hero() {
           style={{ height: "50vh", scaleY }}
         />
         <motion.div style={{ opacity: dropOpacity }}>
-          <Teardrop size={10} />
+          <Teardrop size={24} />
         </motion.div>
       </div>
     </section>
