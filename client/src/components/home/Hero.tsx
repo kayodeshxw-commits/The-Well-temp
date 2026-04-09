@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Teardrop } from '@/components/ui/Teardrop';
 
 const missionLines = [
   { text: "We ", bold: "exist", rest: " to replenish." },
@@ -10,6 +11,7 @@ const missionLines = [
 export default function Hero() {
   const { scrollY } = useScroll();
   const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
+  const dropOpacity = useTransform(scrollY, [540, 600], [0, 1], { clamp: true });
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-0 px-6 text-center">
@@ -48,10 +50,15 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="w-1 bg-black origin-top mt-16 mb-0"
-        style={{ height: "50vh", scaleY }}
-      />
+      <div className="flex flex-col items-center mt-16 mb-0">
+        <motion.div
+          className="w-1 bg-black origin-top"
+          style={{ height: "50vh", scaleY }}
+        />
+        <motion.div style={{ opacity: dropOpacity }}>
+          <Teardrop size={10} />
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import { ClientLayout } from '@/components/layout/ClientLayout';
 import { motion } from 'framer-motion';
+import { ClientDivider } from '@/components/ui/ClientDivider';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 export default function LeviAndToonk() {
@@ -24,13 +25,7 @@ export default function LeviAndToonk() {
         Levi &amp; Toonk
       </motion.h1>
 
-      <motion.div
-        className="w-0.5 h-12 bg-black mx-auto mb-12"
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        style={{ originY: 0 }}
-      />
+      <ClientDivider />
 
       <div className="space-y-6">
         <motion.p

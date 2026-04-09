@@ -1,5 +1,6 @@
 import { ClientLayout } from '@/components/layout/ClientLayout';
 import { motion } from 'framer-motion';
+import { ClientDivider } from '@/components/ui/ClientDivider';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 export default function SageMedia() {
