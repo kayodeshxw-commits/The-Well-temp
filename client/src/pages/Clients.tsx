@@ -73,7 +73,7 @@ export default function Clients() {
             return (
               <div
                 key={client.name}
-                className={client.href ? "" : "opacity-40 cursor-default"}
+                className={client.href ? "" : "cursor-default"}
               >
                 {client.href ? (
                   <a href={client.href} title={client.name}>
