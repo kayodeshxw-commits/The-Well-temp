@@ -56,8 +56,8 @@ const services = [
       "Brand clarity and communication tools",
       "Creative systems setup and refinement",
     ],
-    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750699552/Home/Logos/IMG_0531_aoab5x.png",
-    logoAlt: "Manhattan Theatre Club",
+    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750698403/Home/Logos/IMG_0525_zsb1ki.jpg",
+    logoAlt: "Yale Pathways",
   },
   {
     id: "06",
