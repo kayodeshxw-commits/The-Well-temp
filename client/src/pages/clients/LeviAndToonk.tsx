@@ -34,7 +34,7 @@ export default function LeviAndToonk() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          We connected with Levi &amp; Toonk through Briantria Smocks of Smocks Media Group — fellow SMU alums — and produced a digital reading of two original children's books as part of Yale Cabaret Season 53's Black Theater Festival. The response was immediate.
+          Created by Bri Smocks and Kia M. of Smocks Media Group. The Well came on as producing partner after a digital reading of two original children's books — produced as part of Yale Cabaret Season 53's Black Theater Festival. The response was immediate.
         </motion.p>
 
         <motion.p
@@ -52,7 +52,7 @@ export default function LeviAndToonk() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
         >
-          We're now in active development on the animated series. A Seed &amp; Spark campaign is live to fund the proof-of-concept — four episodes that bring Levi &amp; Toonk from page to screen.
+          The Well is producing partner on the animated series proof-of-concept — four episodes that bring Levi &amp; Toonk from page to screen. A Seed &amp; Spark campaign is live to fund it.
         </motion.p>
 
         <motion.div

@@ -51,7 +51,7 @@ export default function PottersExhibition() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          Richard Potter was the first Black American-born celebrity magician — a household name in early 19th-century America who has been almost entirely forgotten. Potter's Exhibition is our attempt to recover him.
+          Richard Potter was the first Black American-born celebrity magician — a household name in early 19th-century America who has been almost entirely forgotten. A project by Kayodè Soyemi, produced by The Well — Potter's Exhibition is an attempt to recover him.
         </motion.p>
 
         <motion.p

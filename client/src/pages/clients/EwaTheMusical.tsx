@@ -60,7 +60,7 @@ export default function EwaTheMusical() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75 }}
         >
-          We're developing the piece across five phases — table workshop, second workshop, staged reading, editing period, proof-of-concept run. Currently seeking a composer and dramaturg for initial song development, with Nigerian collaborators in process.
+          The Well is supporting development across five phases — table workshop, second workshop, staged reading, editing period, proof-of-concept run. Currently seeking a composer and dramaturg for initial song development, with Nigerian collaborators in process.
         </motion.p>
 
         <motion.p
