@@ -69,7 +69,7 @@ export default function PottersExhibition() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
         >
-          Part One draft complete. Currently in development.
+          Part One draft complete. Currently in development. A project by Kayodè Soyemi, produced by The Well.
         </motion.p>
       </div>
     </ClientLayout>

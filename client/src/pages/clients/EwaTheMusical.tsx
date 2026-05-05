@@ -51,7 +51,7 @@ export default function EwaTheMusical() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          Ewa the Musical is adapted from the novel Ewaoluwa: The Beauty of God by Eseosa Nicole, following a young Nigerian woman navigating family legacy, illness, and diasporic identity through music and fashion.
+          Adapted by Eseosa Nicole from her novel Ewa The Beauty of God. Book &amp; Lyrics by Eseosa Nicole. Ewa follows a young Nigerian woman navigating family legacy, illness, and diasporic identity through music and fashion.
         </motion.p>
 
         <motion.p
@@ -69,7 +69,7 @@ export default function EwaTheMusical() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
         >
-          Ewa is a story the musical theater stage hasn't seen. We intend to change that.
+          Ewa is a story the musical theater stage hasn't seen. Currently in development with The Well.
         </motion.p>
       </div>
     </ClientLayout>

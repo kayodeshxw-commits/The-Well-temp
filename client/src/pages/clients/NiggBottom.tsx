@@ -69,7 +69,7 @@ export default function NiggBottom() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
         >
-          Currently in development.
+          Written and performed by Kayodè Soyemi. Produced in association with The Well.
         </motion.p>
       </div>
     </ClientLayout>

@@ -6,32 +6,26 @@ const projects = [
   {
     title: "Levi & Toonk, the Animated Series",
     slug: "levi-and-toonk",
-    tagline: "Four episodes. Page to screen. A Seed & Spark campaign is live now to fund the proof-of-concept.",
+    tagline: "Created by Bri Smocks and Kia M. of Smocks Media Group. The Well is producing partner on the proof-of-concept.",
     logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750663503/Home/Logos/IMG_0469_owdm99.png",
   },
   {
     title: "Potter's Exhibition",
     slug: "potters-exhibition",
-    tagline: "Recovering America's first Black celebrity magician — through live magic, myth, and a form we call Syntheatre.",
+    tagline: "Recovering America's first Black celebrity magician — through live magic, myth, and a form we call Syntheatre. A project by Kayodè Soyemi, produced by The Well.",
     logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228403/The%20Well/PotterTicket_olhmv2.png",
   },
   {
     title: "Nigg Bottom",
     slug: "nigg-bottom",
-    tagline: "Shakespeare's Fools collaged into one Black body. A solo performance currently in development.",
+    tagline: "Shakespeare's Fools collaged into one Black body. Written and performed by Kayodè Soyemi. Produced in association with The Well.",
     logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228310/The%20Well/1775227861165-ec1d9969-4692-4c68-94b3-0f3a1827a1b2_1_dsrmdp.jpg",
   },
   {
     title: "Ewa the Musical",
     slug: "ewa-the-musical",
-    tagline: "A new musical following a young Nigerian woman navigating family legacy, illness, and diasporic identity.",
+    tagline: "Adapted by Eseosa Nicole from her novel Ewa The Beauty of God. Book & Lyrics by Eseosa Nicole. Currently in development with The Well.",
     logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228319/The%20Well/Screenshot_2026-04-03_at_10.46.44_AM_jfaaeo.png",
-  },
-  {
-    title: "Sage Media",
-    slug: "sage-media",
-    tagline: "Expanding on an Audible Best of 2024 — centering Black and diasporic spiritual practice as self-care.",
-    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228324/The%20Well/44FDEFB5-A619-47F5-92E9-370C6DD8D646_wigvv0.png",
   },
 ];
 

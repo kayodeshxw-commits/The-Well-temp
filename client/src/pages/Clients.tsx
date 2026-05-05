@@ -21,7 +21,6 @@ const clients = [
   { name: "Potter's Exhibition", logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228403/The%20Well/PotterTicket_olhmv2.png", href: "/work/potters-exhibition", size: "w-40" },
   { name: "Nigg Bottom", logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228310/The%20Well/1775227861165-ec1d9969-4692-4c68-94b3-0f3a1827a1b2_1_dsrmdp.jpg", href: "/work/nigg-bottom", size: "w-36" },
   { name: "Ewa the Musical", logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228319/The%20Well/Screenshot_2026-04-03_at_10.46.44_AM_jfaaeo.png", href: "/work/ewa-the-musical", size: "w-32" },
-  { name: "Sage Media", logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775228324/The%20Well/44FDEFB5-A619-47F5-92E9-370C6DD8D646_wigvv0.png", href: "/work/sage-media", size: "w-44" },
   { name: "Michelle with Wet Eyeballs", logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1775244594/The%20Well/48E565C7-720B-43AA-80D2-205CCEAF6BAF_nwmvox.png", href: "/work/michelle", size: "w-36" },
 ];
 
