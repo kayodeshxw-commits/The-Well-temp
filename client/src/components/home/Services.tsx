@@ -5,20 +5,48 @@ import { Plus, Minus } from "lucide-react";
 const services = [
   {
     id: "01",
-    title: "Creative Production",
-    description: "We make things. Across theater, film, digital, and beyond — we bring original work to life with intention and care, from the first idea to the final delivery.",
+    title: "Development",
+    description: "We help ideas grow up. Development is The Well's producing program for new work: we take on projects that established pipelines aren't built to support and build what each one needs to reach the public. Research, dramaturgy, workshops, readings, and producing support, structured project by project.",
     bullets: [
-      "Cross-medium creative direction",
+      { text: "Currently in Development", href: "#current-projects", subItems: [
+        { text: "Potter's Exhibition", href: "/work/potters-exhibition" },
+        { text: "Nigg Bottom", href: "/work/nigg-bottom" },
+        { text: "Ewa the Musical", href: "/work/ewa-the-musical" },
+      ]},
+      "Dramaturgy and story development",
+      "Workshop facilitation and rehearsal support",
+    ],
+    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750697730/Home/Logos/Cab55-Logo-MAIN_kjmrfr.png",
+    logoAlt: "Yale Cabaret",
+  },
+  {
+    id: "02",
+    title: "Creative Production",
+    description: "We make things. Theater, film, events, digital. When a project is ready for an audience, we produce it: assembling the team, running the room, and carrying it from first idea to final delivery.",
+    bullets: [
       "Creative producing and visioning",
+      "Cross-medium creative direction",
       "Live performance curation and direction",
     ],
     logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750658946/Home/Logos/E7359556-6916-4133-B304-BC84EF1D95A3_gbu8vf.png",
     logoAlt: "The Billie Holiday Theatre",
   },
   {
-    id: "02",
+    id: "03",
+    title: "Education",
+    description: "We show up for artists. Through teaching, coaching, and community programs, we build learning spaces rooted in care, rigor, and brilliance, from youth programs to professional intensives, including original frameworks developed at The Well.",
+    bullets: [
+      "Workshops and professional intensives",
+      "Youth and community programs",
+      "Coaching and mentorship",
+    ],
+    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750699744/Home/Logos/IMG_0532_cwxlky.png",
+    logoAlt: "August Wilson New Voices",
+  },
+  {
+    id: "04",
     title: "Project Management",
-    description: "We keep it moving. We handle the details — timelines, budgets, logistics, coordination — so you can focus on the work. We adapt to what each project needs and we don't drop the ball.",
+    description: "We keep it moving. We handle the details, timelines, budgets, logistics, and coordination, so you can focus on the work. We adapt to what each project needs and we don't drop the ball.",
     bullets: [
       "Timeline building and task delegation",
       "Budgeting, scheduling, and logistics",
@@ -28,31 +56,12 @@ const services = [
     logoAlt: "Yale Cabaret",
   },
   {
-    id: "03",
-    title: "Education",
-    description: "We show up for artists. Through coaching, mentorship, and community engagement, we co-create learning spaces rooted in care, rigor, and brilliance — from youth programs to professional intensives.",
-    bullets: [],
-    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750699744/Home/Logos/IMG_0532_cwxlky.png",
-    logoAlt: "August Wilson New Voices",
-  },
-  {
-    id: "04",
-    title: "Development",
-    description: "We help ideas grow up. We work closely with artists and organizations to shape early-stage work into something real — through dramaturgy, workshops, and honest creative feedback.",
-    bullets: [
-      "Dramaturgy and story development",
-      "One-on-one creative consultations",
-      "Workshop facilitation and rehearsal support",
-    ],
-    logo: "https://res.cloudinary.com/dwi8ov4xq/image/upload/f_auto,q_auto/v1750697730/Home/Logos/Cab55-Logo-MAIN_kjmrfr.png",
-    logoAlt: "Yale Cabaret",
-  },
-  {
     id: "05",
     title: "Consulting",
-    description: "We help you see clearly. Whether you're an individual or an institution, we work with you to cut through the noise, sharpen your goals, and build something that actually lasts.",
+    description: "We help you see clearly. Whether you're an individual artist or an institution, we work with you to sharpen your goals, build your systems, and make the thing sustainable.",
     bullets: [
       "Strategic planning for creatives and orgs",
+      "One-on-one creative consultations",
       "Brand clarity and communication tools",
       "Creative systems setup and refinement",
     ],
@@ -62,7 +71,7 @@ const services = [
   {
     id: "06",
     title: "Special Projects",
-    description: "We produce experiences that mean something. From concept to execution, we build events and activations that are culturally grounded, community-centered, and impossible to forget.",
+    description: "We produce experiences that mean something. Events, activations, and cultural programming, built from concept to execution: culturally grounded, community-centered, and impossible to forget.",
     bullets: [
       "Event concepting and creative direction",
       "Full-scale production and logistics",
@@ -78,7 +87,7 @@ export function Services() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   return (
-    <section id="services" className="py-24 px-4 md:px-8 relative min-h-screen bg-background">
+    <section id="services" className="pt-2 pb-24 px-4 md:px-8 relative min-h-screen bg-background">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4">
           <div className="sticky top-32">
@@ -169,11 +178,35 @@ export function Services() {
 
                       {service.bullets.length > 0 && (
                         <ul className="mb-6 space-y-1">
-                          {service.bullets.map((bullet) => (
-                            <li key={bullet} className="font-mono text-xs uppercase tracking-widest opacity-60 before:content-['—'] before:mr-2">
-                              {bullet}
-                            </li>
-                          ))}
+                          {service.bullets.map((bullet) => {
+                            if (typeof bullet === "object") {
+                              return (
+                                <li key={bullet.text}>
+                                  <span className="font-mono text-xs uppercase tracking-widest opacity-60 before:content-['—'] before:mr-2">
+                                    <a href={bullet.href} className="underline underline-offset-2 hover:opacity-100 transition-opacity">
+                                      {bullet.text}
+                                    </a>
+                                  </span>
+                                  {bullet.subItems && bullet.subItems.length > 0 && (
+                                    <ul className="mt-1 ml-6 space-y-1">
+                                      {bullet.subItems.map((sub) => (
+                                        <li key={sub.text} className="font-mono text-xs uppercase tracking-widest opacity-60 italic before:content-['↳'] before:mr-2">
+                                          <a href={sub.href} className="hover:opacity-100 transition-opacity">
+                                            {sub.text}
+                                          </a>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </li>
+                              );
+                            }
+                            return (
+                              <li key={bullet} className="font-mono text-xs uppercase tracking-widest opacity-60 before:content-['—'] before:mr-2">
+                                {bullet}
+                              </li>
+                            );
+                          })}
                         </ul>
                       )}
 

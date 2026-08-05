@@ -11,6 +11,8 @@ const missionLines = [
 export default function Hero() {
   const { scrollY } = useScroll();
   const scaleY = useTransform(scrollY, [0, 600], [0, 1], { clamp: true });
+  const textOpacity = useTransform(scrollY, [350, 600], [0, 1], { clamp: true });
+  const textY = useTransform(scrollY, [350, 600], [16, 0], { clamp: true });
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-0 px-6 text-center">
@@ -53,6 +55,13 @@ export default function Hero() {
         className="w-1 bg-black origin-top mt-16 mb-0"
         style={{ height: "50vh", scaleY }}
       />
+
+      <motion.p
+        className="max-w-xl font-sans text-base md:text-lg font-bold text-muted-foreground leading-relaxed mt-4 mb-8"
+        style={{ opacity: textOpacity, y: textY }}
+      >
+        The Well develops and produces new work by global majority artists, work that doesn't fit existing pipelines, and builds the structure that gets it made. Every project starts in the archive, the source text, or a form that doesn't exist yet.
+      </motion.p>
     </section>
   );
 }
