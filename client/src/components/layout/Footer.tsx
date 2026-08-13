@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="bg-black text-white py-16 px-6 md:px-12 border-t border-white/10">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Top nav (like old site) */}
-        <nav className="flex justify-center gap-8 text-sm">
+        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm">
           <a href="/" className="font-mono uppercase tracking-widest hover:opacity-80 transition-opacity">
             HOME
           </a>
