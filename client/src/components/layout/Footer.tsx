@@ -18,6 +18,9 @@ export function Footer() {
           <a href="/contact" className="font-mono uppercase tracking-widest hover:opacity-80 transition-opacity">
             CONTACT
           </a>
+          <a href="https://linktr.ee/thewellisfull" target="_blank" rel="noopener noreferrer" className="font-mono uppercase tracking-widest hover:opacity-80 transition-opacity">
+            LINKTREE
+          </a>
         </nav>
 
         {/* Chant (exact old site style) */}
