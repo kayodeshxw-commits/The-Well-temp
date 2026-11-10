@@ -56,12 +56,6 @@ export default function Hero() {
         style={{ height: "50vh", scaleY }}
       />
 
-      <motion.p
-        className="max-w-xl font-sans text-base md:text-lg font-bold text-muted-foreground leading-relaxed mt-4 mb-8"
-        style={{ opacity: textOpacity, y: textY }}
-      >
-        The Well develops and produces new work by global majority artists, work that doesn't fit existing pipelines, and builds the structure that gets it made. Every project starts in the archive, the source text, or a form that doesn't exist yet.
-      </motion.p>
     </section>
   );
 }
