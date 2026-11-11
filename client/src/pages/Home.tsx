@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/layout/Navbar';
 import Hero from '@/components/home/Hero';
 import { Services } from '@/components/home/Services';
+import { BookSessionTeaser } from '@/components/home/BookSessionTeaser';
 import { CurrentProjects } from '@/components/home/CurrentProjects';
 import { Footer } from '@/components/layout/Footer';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <BookSessionTeaser />
         <CurrentProjects />
       </main>
       <Footer />

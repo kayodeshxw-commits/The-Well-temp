@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CurrentProjects } from "@/components/home/CurrentProjects";
+import { BookSession } from "@/components/home/BookSession";
 
 import { usePageTitle } from "@/hooks/usePageTitle";
 
@@ -121,6 +122,9 @@ export default function Contact() {
           </form>
         )}
         </motion.div>
+      </div>
+      <div id="sessions">
+        <BookSession />
       </div>
       <CurrentProjects />
       <Footer />
