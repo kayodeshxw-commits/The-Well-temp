@@ -46,6 +46,7 @@ export default function Contact() {
         />
 
         <motion.div style={{ opacity: contentOpacity, y: contentY }}>
+        <p className="font-mono text-xs uppercase tracking-widest opacity-50 mb-8">General Inquiries</p>
         {submitted ? (
           <div className="max-w-lg mx-auto text-center space-y-4">
             <p className="font-display text-3xl font-black uppercase">Message sent.</p>

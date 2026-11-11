@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function BookSessionTeaser() {
   return (
-    <section className="px-4 md:px-8 bg-background">
+    <section className="px-4 md:px-8 bg-black/5">
       <div className="max-w-7xl mx-auto border-t border-black/10">
         <motion.a
           href="/contact#sessions"
